@@ -8,7 +8,7 @@
 ## Installation
 
 ```
-./compile.sh && ./install.sh
+CC=gcc ./compile.sh && PREFIX=/usr LIBS_32=lib LIBS_64=lib64 ./install.sh
 ```
 
 ## Platforms
