@@ -179,7 +179,7 @@ ErrDecl file_exec(RStr path, VStr *subdirs, bool recursive, FileFunc exec, void 
         struct dirent *dp = 0;
         char cdir[FILE_PATH_MAX];
         rstr_cstr(path, cdir, FILE_PATH_MAX);
-        printff("CDIR [%s]", cdir);
+        printff("CDIR [%.*s]", (int)len, cdir);
         if((dir = opendir(cdir)) == NULL) {
             goto clean;
             THROW("can't open directory '%.*s'", (int)len, cdir);
