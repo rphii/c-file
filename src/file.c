@@ -175,7 +175,7 @@ ErrDecl file_exec(RStr path, VStr *subdirs, bool recursive, FileFunc exec, void 
             THROW("will not go over '%.*s' (enable recursion to do so)", RSTR_F(path));
         }
         size_t len = rstr_rfind_ch(path, PLATFORM_CH_SUBDIR, 0);
-        if(len < rstr_length(path) && rstr_get_at(&path, len) != PLATFORM_CH_SUBDIR) ++len;
+        //if(len >= rstr_length(path) && rstr_get_at(&path, len) != PLATFORM_CH_SUBDIR) ++len;
         struct dirent *dp = 0;
         char cdir[FILE_PATH_MAX];
         rstr_cstr(path, cdir, FILE_PATH_MAX);
