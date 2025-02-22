@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib/rphii
+
+Name: c-file
+Description: C attribute header
+Cflags: -I${includedir}/rphii
+Libs: -L${libdir} -lfile
+Version: 9999
+
